@@ -1,33 +1,30 @@
 <script setup lang="ts">
-const { t, availableLocales, locale } = useI18n()
-
-const toggleLocales = () => {
-  // change to some real logic
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
-}
 </script>
 
 <template>
-  <nav text-xl text-right m-6>
-    <RouterLink text-left class="icon-btn mx-2" to="/" :title="t('button.home')">
-      <div i-carbon-campsite />
-    </RouterLink>
-
-    <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
-      <div i="carbon-sun dark:carbon-moon" />
-    </button>
-
-    <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales()">
-      <div i-carbon-language />
-    </a>
-
-    <RouterLink class="icon-btn mx-2" to="/about" :title="t('button.about')">
-      <div i-carbon-dicom-overlay />
-    </RouterLink>
-
-    <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/Jeffrey-mu/vitesse" target="_blank" title="GitHub">
-      <div i-carbon-logo-github />
-    </a>
+  <nav text-xl text-right h-10 style="background: linear-gradient(270deg, #CC8466 0%, #5A3023 100%);" flex justify-between px-10 lh-10 c="#fff" items-center>
+    <div>
+      <img
+        src="https://reidkblackman.com/images/more.png" style="width: 1.5rem;
+    height: 1.5rem;
+}" alt=""
+      >
+    </div>
+    <div
+      style="font-weight: 700;
+    letter-spacing: .3rem;
+    font-family: auto;
+    font-size: .8rem;
+    font-family: comic sans ms;"
+    >
+      reidkblackman
+    </div>
+    <div>
+      <img
+        src="https://reidkblackman.com/images/home.png" style="width: 1.5rem;
+          height: 1.5rem;
+      }" alt=""
+      >
+    </div>
   </nav>
 </template>

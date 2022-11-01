@@ -1,3 +1,3 @@
 <template>
-  <List />
+  <Detail :id="id" />
 </template>
